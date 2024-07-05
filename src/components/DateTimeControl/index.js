@@ -3,7 +3,6 @@
  */
 import React, { ReactNode } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 /**
  * WordPress dependencies.
@@ -44,11 +43,12 @@ const DateTimeControl = ( {
 	startOfWeek,
 	onChange
 } ) => {
+	const classNames = [ "ks-date-time-control", className ].filter( ( i ) => i ).join( " " );
 	return (
 		<BaseControl
 			label={ label }
 			help={ help }
-			className={ classnames( 'ks-date-time-control', className, ) }
+			className={ classNames }
 		>
 			<Dropdown
 				popoverProps={ { placement: popoverProps } }
