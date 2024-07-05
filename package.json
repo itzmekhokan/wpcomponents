@@ -1,5 +1,5 @@
 {
-	"name": "itzmekhokan/wpcomponents",
+	"name": "itzmekhokan-wpcomponents",
 	"version": "1.0.0",
 	"description": "A npm package for wordpress block components",
 	"main": "dist/index.js",

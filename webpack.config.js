@@ -9,7 +9,7 @@ module.exports = {
 		clean: true,
 		filename: 'index.js',
 		library: {
-			name: 'itzmekhokan/wpcomponents',
+			name: 'itzmekhokan-wpcomponents',
 			type: 'umd',
 		},
 		path: path.resolve( __dirname, 'dist' ),
