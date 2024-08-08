@@ -9,25 +9,25 @@ import { useState } from 'react';
 import { AccordionControl } from 'itzmekhokan-wpcomponents';
 
 const MyAccordionControl = () => {
-	const [ accordions, setAccordions ] = useState( [] );
+    const [ accordions, setAccordions ] = useState( [] );
 
     const labels = {
-		label: 'FAQ Accordions',
-		addBtnText: 'Add new FAQ',
-		removeBtnText: 'Remove FAQ',
-		moveUpText: 'Move up',
-		moveDownText: 'Move down',
+        label: 'FAQ Accordions',
+        addBtnText: 'Add new FAQ',
+        removeBtnText: 'Remove FAQ',
+        moveUpText: 'Move up',
+        moveDownText: 'Move down',
         placeholderTitle: '',
         placeholderContent: '',
-	}
+    }
 
-	return (
+    return (
         <AccordionControl
             labels={ labels }
             values={ accordions }
             onChange={ ( newData ) => setAccordions( newData ) }
         />
-	);
+    );
 };
 ```
 

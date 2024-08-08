@@ -9,15 +9,15 @@ import { useState } from 'react';
 import { DateTimeControl } from 'itzmekhokan-wpcomponents';
 
 const MyDateTimeControl = () => {
-	const [ date, setDate ] = useState( new Date() );
+    const [ date, setDate ] = useState( new Date() );
 
-	return (
+    return (
         <DateTimeControl
             currentDateTime={ date ? date : null }
             is12Hour={ true }
             onChange={ ( newDate ) => setDate( newDate ) }
         />
-	);
+    );
 };
 ```
 
