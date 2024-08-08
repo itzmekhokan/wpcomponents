@@ -22,7 +22,7 @@ const MyAccordionControl = () => {
 	}
 
 	return (
-		<AccordionControl
+        <AccordionControl
             labels={ labels }
             values={ accordions }
             onChange={ ( newData ) => setAccordions( newData ) }

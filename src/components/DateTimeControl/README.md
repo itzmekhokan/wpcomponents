@@ -12,7 +12,7 @@ const MyDateTimeControl = () => {
 	const [ date, setDate ] = useState( new Date() );
 
 	return (
-		<DateTimeControl
+        <DateTimeControl
             currentDateTime={ date ? date : null }
             is12Hour={ true }
             onChange={ ( newDate ) => setDate( newDate ) }
