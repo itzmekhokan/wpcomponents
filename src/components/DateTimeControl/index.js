@@ -25,6 +25,7 @@ import {
  * @param {string}   props.popoverProps      Pop over position.
  * @param {string}   props.buttonVariant     Button variant.
  * @param {string}   props.buttonPlaceholder Button placeholder label.
+ * @param {string}   props.buttonResetLabel  Button reset label.
  * @param {string}   props.currentDateTime   Current component value.
  * @param {boolean}  props.is12Hour          Whether we use a 12-hour clock.
  * @param {number}   props.startOfWeek       The day that the week should start on.
@@ -38,6 +39,7 @@ const DateTimeControl = ( {
 	popoverProps,
 	buttonVariant,
 	buttonPlaceholder,
+	buttonResetLabel,
 	currentDateTime,
 	is12Hour,
 	startOfWeek,
@@ -70,6 +72,14 @@ const DateTimeControl = ( {
 					/>
 				) }
 			/>
+			<Button
+				className="date-time-control-reset"
+				variant="secondary"
+				onClick={ () => onChange( '' ) }
+				style={ { marginLeft: '10px' } }
+			>
+				{ buttonResetLabel }
+			</Button>
 		</BaseControl>
 	);
 };
@@ -81,6 +91,7 @@ DateTimeControl.propTypes = {
 	popoverProps: PropTypes.string,
 	buttonVariant: PropTypes.string,
 	buttonPlaceholder: PropTypes.string,
+	buttonResetLabel: PropTypes.string,
 	currentDateTime: PropTypes.string.isRequired,
 	is12Hour: PropTypes.boolean,
 	startOfWeek: PropTypes.number,
@@ -91,6 +102,8 @@ DateTimeControl.defaultProps = {
 	popoverProps: 'bottom-start',
 	buttonVariant: 'secondary',
 	currentDateTime: null,
+	buttonPlaceholder: 'Date-Time',
+	buttonResetLabel: 'Reset',
 	is12Hour: false,
 	startOfWeek: 0,
 };
